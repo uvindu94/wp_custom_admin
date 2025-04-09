@@ -59,7 +59,7 @@ $recent_posts = get_posts($args);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Management</title>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/e1gb9cd8385lajekww7fknsunez5b2wqicnm9k7n7fy6frp8/tinymce/6/tinymce.min.js"></script>
     <script>
         tinymce.init({ selector: '#content' });
     </script>
@@ -123,7 +123,7 @@ $recent_posts = get_posts($args);
                     <td><?= esc_html($post->post_date); ?></td>
                     <td><?= esc_html($post->post_status); ?></td>
                     <td>
-                        <a href="edit_post.php?id=<?= $post->ID; ?>">Edit</a>
+                        <!-- <a href="edit_post.php?id= $post->ID;">Edit</a> -->
                         <form method="POST" action="delete_post.php" style="display:inline;">
                             <input type="hidden" name="post_id" value="<?= $post->ID; ?>">
                             <button type="submit" class="delete-btn">Delete</button>
